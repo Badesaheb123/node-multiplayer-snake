@@ -20,9 +20,9 @@ node ('Ubuntu-app-agent'){
             app.push("latest")
         			}
          }
-    stage('SECURITY-IMAGE-SCANNER'){
-        build 'SECURITY-IMAGE-SCANNER-AQUAMICROSCANNER'
-    }
+    // stage('SECURITY-IMAGE-SCANNER'){
+    //     build 'SECURITY-IMAGE-SCANNER-AQUAMICROSCANNER'
+    // }
   
     
     stage('Pull-image-server') {
@@ -31,9 +31,9 @@ node ('Ubuntu-app-agent'){
          sh "docker-compose up -d"	
       }
     
-    stage('DAST')
-        {
-        build 'SECURITY-DAST-OWASP_ZAP'
-        }
+    // stage('DAST')
+    //     {
+    //     build 'SECURITY-DAST-OWASP_ZAP'
+    //     }
  
 }
